@@ -13,8 +13,9 @@ assert len(argv) > 1, "missing data file"
 
 file_name = argv[1]
 rerun = 0
-if argv[2] == 'rerun':
-    rerun = 1
+if len(argv) > 2:
+    if argv[2] == 'rerun':
+        rerun = 1
 
 #if both output files exist, exit
 if os.path.isfile(file_name[0:-4]+'_instances.data') and os.path.isfile(file_name[0:-4]+'_visual.JPG') and rerun == 0:
