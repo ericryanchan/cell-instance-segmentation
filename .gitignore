@@ -7,3 +7,5 @@ input
 models
 *.jpeg
 *.out
+*.sh
+*.txt

@@ -10,7 +10,7 @@ elif len(argv) == 3:
 else:
     print("additional args ignored")
 
-for path_name in sorted(glob.glob(directory_name + '/**/*.JPG', recursive = True)):
+for path_name in sorted(glob.glob(directory_name + '/**/*[!visual].JPG', recursive = True)):
     outfile.write(f'python model_predict_func.py {path_name}\n')
 
 outfile.close() 
